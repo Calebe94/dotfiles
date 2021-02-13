@@ -8,7 +8,3 @@ Este repositório é apenas um complemento do meu setup, os outros estão listad
 * [slstatus](https://github/Calebe94/slstatus);
 * [scripts](https://github/Calebe94/scripts);
 * [tinytools](https://github/Calebe94/tinytools).
-
-## Paths
-
-* [config/](config/) -> `$HOME/.config`
