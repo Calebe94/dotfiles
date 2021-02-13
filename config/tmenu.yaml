@@ -1,0 +1,37 @@
+Menu:
+  cancel: null
+  run: dmenu_run_history -p 'run' -fn 'size=12' -sb '#BD93F9' -sf '#f3f4f5' -nf '#f3f4f5' -nb '#1c1f25'
+  work:
+    mac: st sshpass -p calebe100 ssh calebe94@iMac-de-Everton.local
+    linux: st sshpass -p calebe100 ssh -t calebe94@iMac-de-Everton.local "/usr/local/bin/docker run -it ubuntu_bionic"
+  clean: /home/calebe94/Packages/sysclean
+  calc: $HOME/.scripts/menu-calc/=
+  ranger: st ranger
+  chromium: chromium --restore-last-session
+  minecraft: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar $HOME/Shiginima_Launcher_SE.v4400.jar
+  codium: codium
+  thunar: thunar
+  dicio: echo "" | dmenu -p "dicio-PT_BR" | (read sel; test "$sel" != "" && tsearch -t $sel -e dicio)
+  qutebrowser: qutebrowser
+  whatsapp: chromium --no-sandbox --app=https://web.whatsapp.com/
+  telegram: chromium --no-sandbox --app=https://web.telegram.org/
+  discord: /opt/discord/Discord-0.0.13-x86_64.AppImage --no-sandbox
+  spotify: chromium --no-sandbox --app=https://open.spotify.com/
+  notes: dmenu_tnotes -fn 'size=12' -sb '#BD93F9' -sf '#f3f4f5' -nf '#f3f4f5' -nb '#1c1f25'
+  todo: dmenu_ttodo -fn 'size=12' -sb '#BD93F9' -sf '#f3f4f5' -nf '#f3f4f5' -nb '#1c1f25'
+  bookmarks: $HOME/.scripts/dmenu/dmenu_buku -fn 'size=12' -sb '#BD93F9' -sf '#f3f4f5' -nf '#f3f4f5' -nb '#1c1f25'
+  wifi: st nmtui
+  settings: xfce4-settings-manager
+  passwords: $HOME/.config/i3/scripts/passmenu -fn 'size=12' -sb '#BD93F9' -sf '#f3f4f5' -nf '#f3f4f5' -nb '#1c1f25'
+  suspend:
+    no: null
+    yes: sudo s2ram -f -p -m
+  reboot: 
+    no: null
+    yes: systemctl reboot
+  shutdown:
+    no: null
+    yes: systemctl poweroff
+  logout:
+    no: null
+    yes: session=$(loginctl session-status | head -n 1 | awk '{print $1}'); loginctl terminate-session $session
